@@ -25,7 +25,7 @@ import {
 } from "@replyke/ui-core-react-native";
 import { Replies } from "./Replies";
 import HeartButton from "./HeartButton";
-import useSheetManager from "../../../hooks/useSheetManager";
+import useSheetManager from "../../../../hooks/useSheetManager";
 
 const Comment = ({
   comment: commentFromSection,

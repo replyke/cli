@@ -5,7 +5,7 @@ import {
   resetDiv,
   resetUl,
 } from "@replyke/ui-core-react-js";
-import useModalManager from "../../../hooks/useModalManager";
+import useModalManager from "../../../../hooks/useModalManager";
 
 function CommentMenuModalOwner() {
   const {

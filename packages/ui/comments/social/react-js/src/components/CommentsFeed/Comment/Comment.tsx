@@ -21,7 +21,7 @@ import {
 
 import { Replies } from "./Replies";
 import HeartButton from "./HeartButton";
-import useModalManager from "../../../hooks/useModalManager";
+import useModalManager from "../../../../hooks/useModalManager";
 
 const Comment = React.memo(
   ({

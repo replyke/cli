@@ -1,5 +1,5 @@
 import { useUser, Comment as CommentType } from "@replyke/react-js";
-import useModalManager from "../../../hooks/useModalManager";
+import useModalManager from "../../../../hooks/useModalManager";
 
 interface ActionMenuProps {
   comment: CommentType;
