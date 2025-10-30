@@ -97,10 +97,8 @@ function VoteButtons({
       <button
         onClick={() => {
           if (!user) {
-            (
-              callbacks?.loginRequiredCallback ||
-              (() => alert("Please login first."))
-            )();
+            
+              callbacks?.loginRequiredCallback?.();
             return;
           }
           handleVote("up");
@@ -168,10 +166,8 @@ function VoteButtons({
       <button
         onClick={() => {
           if (!user) {
-            (
-              callbacks?.loginRequiredCallback ||
-              (() => alert("Please login first."))
-            )();
+            
+              callbacks?.loginRequiredCallback?.();
             return;
           }
           handleVote("down");

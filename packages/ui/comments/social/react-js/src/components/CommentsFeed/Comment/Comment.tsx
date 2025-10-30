@@ -77,10 +77,8 @@ const Comment = React.memo(
 
     const handleUpvoteComment = () => {
       if (!user) {
-        (
-          callbacks?.loginRequiredCallback ||
-          (() => alert("Please login first."))
-        )();
+        
+          callbacks?.loginRequiredCallback?.();
         return;
       }
 
@@ -98,10 +96,8 @@ const Comment = React.memo(
 
     const handleRemoveCommentUpvote = () => {
       if (!user) {
-        (
-          callbacks?.loginRequiredCallback ||
-          (() => alert("Please login first."))
-        )();
+        
+          callbacks?.loginRequiredCallback?.();
         return;
       }
 
