@@ -1,6 +1,63 @@
 # Publishing Guide for Replyke CLI & Components
 
-This guide covers how to publish the CLI to npm and update the component registry.
+This guide covers how to publish the CLI to npm, update the component registry, and how developers use the CLI.
+
+---
+
+## 👨‍💻 Developer Workflow (Using the CLI)
+
+This is how developers will use your published CLI:
+
+### 1. Initialize Replyke in their project
+```bash
+npx @replyke/cli init
+```
+
+This prompts them to choose:
+- **Platform**: React (Web), React Native, or Expo
+- **Style**: Inline Styles or Tailwind CSS
+- **Component path**: Where to install components (default: `src/components`)
+
+Creates a `replyke.json` config file:
+```json
+{
+  "platform": "react",
+  "style": "tailwind",
+  "typescript": true,
+  "paths": {
+    "components": "src/components"
+  },
+  "aliases": {
+    "@/components": "./src/components"
+  }
+}
+```
+
+### 2. Install components
+```bash
+# Install threaded comments (Reddit-style)
+npx @replyke/cli add comments-threaded
+
+# Install social comments (Instagram-style)
+npx @replyke/cli add comments-social
+```
+
+### 3. Use in their app
+```tsx
+import ThreadedCommentSection from './components/threaded-comment-section';
+
+function App() {
+  return (
+    <ThreadedCommentSection
+      entityId="post-123"
+      theme="dark"
+    />
+  );
+}
+```
+
+### 4. Customize styles directly
+Developers can modify the component files directly - that's the whole point of this approach!
 
 ---
 
