@@ -50,7 +50,7 @@ packages/ui/comments/
 
 ### Target State (Shadcn Model)
 ```
-replyke-components/         # NEW standalone repo
+cli/         # NEW standalone repo
 ├── packages/
 │   └── cli/                # @replyke/cli
 │       ├── src/
@@ -93,7 +93,7 @@ replyke-components/         # NEW standalone repo
 
 ### Create New Standalone Repository
 
-**Repository Name:** `replyke-components` (or `replyke-ui`, `replyke-registry`)
+**Repository Name:** `cli` (contains both CLI tool and component registry)
 
 **Reasoning:**
 - Separates distribution models (npm vs copy-paste)
@@ -104,15 +104,15 @@ replyke-components/         # NEW standalone repo
 **Initial Setup:**
 ```bash
 # Outside the monorepo
-mkdir replyke-components
-cd replyke-components
+mkdir cli
+cd cli
 git init
 pnpm init
 ```
 
 **Directory Structure:**
 ```
-replyke-components/
+cli/
 ├── .github/
 │   └── workflows/          # CI/CD for CLI publishing
 ├── packages/
@@ -641,7 +641,7 @@ async function checkDependencies(platform: string) {
       "type": "lib"
     }
   ],
-  "registryUrl": "https://raw.githubusercontent.com/replyke/replyke-components/main/registry/react/comments-social/styled"
+  "registryUrl": "https://raw.githubusercontent.com/replyke/cli/main/registry/react/comments-social/styled"
 }
 ```
 
@@ -658,7 +658,7 @@ export async function add(componentName: string) {
   const spinner = ora(`Fetching ${componentName}...`).start();
 
   // Fetch registry metadata
-  const registryUrl = `https://raw.githubusercontent.com/replyke/replyke-components/main/registry/${config.platform}/${componentName}/${config.style}/registry.json`;
+  const registryUrl = `https://raw.githubusercontent.com/replyke/cli/main/registry/${config.platform}/${componentName}/${config.style}/registry.json`;
   const response = await fetch(registryUrl);
   const registry = await response.json();
 
@@ -861,7 +861,7 @@ registry/
       "description": "Utility functions"
     }
   ],
-  "registryUrl": "https://raw.githubusercontent.com/replyke/replyke-components/main/registry/react/comments-social/styled"
+  "registryUrl": "https://raw.githubusercontent.com/replyke/cli/main/registry/react/comments-social/styled"
 }
 ```
 

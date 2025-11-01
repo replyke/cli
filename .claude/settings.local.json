@@ -6,7 +6,17 @@
       "Bash(pnpm build:*)",
       "Bash(dir:*)",
       "mcp__ide__getDiagnostics",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "WebSearch",
+      "Bash(node dist/index.js:*)",
+      "Bash(node -e \"import(''url'').then(u => import(''path'').then(p => { const __filename = u.fileURLToPath(import.meta.url); const __dirname = p.dirname(__filename); const LOCAL_REGISTRY_PATH = p.resolve(__dirname, ''..'', ''..'', ''..'', ''registry''); console.log(''Current dir:'', __dirname); console.log(''LOCAL_REGISTRY_PATH:'', LOCAL_REGISTRY_PATH); }))\")",
+      "Bash(node --check:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:registry.npmjs.org)",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:app.unpkg.com)",
+      "WebFetch(domain:cdn.jsdelivr.net)"
     ],
     "deny": [],
     "ask": []
