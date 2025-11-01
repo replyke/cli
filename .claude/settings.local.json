@@ -6,7 +6,8 @@
       "Bash(pnpm build:*)",
       "Bash(dir:*)",
       "mcp__ide__getDiagnostics",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
