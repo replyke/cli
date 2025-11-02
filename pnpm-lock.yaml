@@ -35,9 +35,9 @@ importers:
       prompts:
         specifier: ^2.4.2
         version: 2.4.2
-      sucrase:
-        specifier: ^3.35.0
-        version: 3.35.0
+      ts-blank-space:
+        specifier: ^0.6.2
+        version: 0.6.2
     devDependencies:
       '@types/fs-extra':
         specifier: ^11.0.4
@@ -4296,6 +4296,10 @@ packages:
   tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
+
+  ts-blank-space@0.6.2:
+    resolution: {integrity: sha512-hZjcHdHrveEKI67v8OzI90a1bizgoDkY7ekE4fH89qJhZgxvmjfBOv98aibCU7OpKbvV3R9p/qd3DrzZqT1cFQ==}
+    engines: {node: '>=18.0.0'}
 
   ts-easing@0.2.0:
     resolution: {integrity: sha512-Z86EW+fFFh/IFB1fqQ3/+7Zpf9t2ebOAxNI/V6Wo7r5gqiqtxmgTlQ1qbqQcjLKYeSHPTsEmvlJUDg/EuL0uHQ==}
@@ -9627,6 +9631,10 @@ snapshots:
       punycode: 2.3.1
 
   tree-kill@1.2.2: {}
+
+  ts-blank-space@0.6.2:
+    dependencies:
+      typescript: 5.9.3
 
   ts-easing@0.2.0: {}
 
