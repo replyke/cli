@@ -18,6 +18,7 @@
   "author": "Replyke",
   "license": "Apache-2.0",
   "devDependencies": {
+    "nativewind": "^4.2.3",
     "typescript": "^5.3.3"
   },
   "pnpm": {
